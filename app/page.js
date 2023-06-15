@@ -15,7 +15,7 @@ export default function Home() {
             <div className="md:w-1/2">
               <h1 className="text-4xl font-bold">Innovation Architect: Building the foundations of tomorrow</h1>
               <p className="text-muted-foreground mt-4 max-w-lg">
-                Welcome to my digital domain! As an Innovation Architect, I build tomorrow's foundations. With a passion for technology and expertise in embedded systems engineering, I create meaningful solutions that drive progress. Join me on this exciting journey as we push boundaries, pioneer advancements, and shape a limitless future. Together, let's build a better world through innovation.
+                Welcome to my digital domain! As an Innovation Architect, I build tomorrows foundations. With a passion for technology and expertise in embedded systems engineering, I create meaningful solutions that drive progress. Join me on this exciting journey as we push boundaries, pioneer advancements, and shape a limitless future. Together, lets build a better world through innovation.
               </p>
               <div className="flex gap-2 mt-6">
                 <Button asChild><Link href="/projects">My Work</Link></Button>
