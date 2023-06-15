@@ -4,11 +4,13 @@ Welcome to the repository for my personal website and blog! This website serves 
 
 ## Table of Contents
 
-- Features
-- Technologies Used
-- Getting Started
-- Usage
-- Contact
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
+
 
 ## Features
 - Portfolio: Showcase your projects, work samples, and achievements.
@@ -20,12 +22,14 @@ Welcome to the repository for my personal website and blog! This website serves 
 
 ## Technologies Used
 
-- Next.JS
-- Tailwind CSS
-- shadcn/ui
-- Cloudlfare Pages
+- [Next.JS](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com)
+- [Taxanomy](https://tx.shadcn.com)
+- [Cloudflare CDN](https://cloudflare.com) 
+- [Cloudlfare Pages](https://pages.cloudlfare.com)
 
-Getting Started
+## Getting Started
 
 To get a copy of this project up and running on your local machine, follow these steps:
 
@@ -44,3 +48,19 @@ Open the directory in VS Code.
 To run the project in development mode run:
 
     npm run dev
+
+## Usage
+
+Feel free to use the code base as you like. Though and attribution would be helpful.
+
+## Inspiration
+
+- [shadcn/ui](https://ui.shadcn.com)
+- [Next.JS Strapi Corporate Starter](https://github.com/strapi/nextjs-corporate-starter)
+
+## Contact
+
+- hello@sumietgore.com
+- https://sumietgore.com
+- https://twitter.com/sumietgore
+- https://instagram.com/sumietgore
