@@ -26,7 +26,7 @@ export default function Home() {
         <Section>
           <div className="container max-w-5xl">
             <div className="bg-muted rounded-md py-12 px-4 flex flex-col gap-4">
-              <h1 className="text-center">Let's chat</h1>
+              <h1 className="text-center">Lets chat</h1>
               <Button asChild variant="link" className="text-4xl text-center"><Link href="mailto:hello@sumietgore.com">hello@sumietgore.com</Link></Button>
             </div>
           </div>
