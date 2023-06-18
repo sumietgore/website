@@ -1,10 +1,12 @@
-export default function Logo() {
+import { twMerge } from "tailwind-merge"
+
+export default function Logo({ className }) {
     return (
         <svg
             id="logo"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 200 200"
-            className="h-8 fill-neutral-800 mr-4 self-center cursor-pointer"
+            className={twMerge("h-8 fill-neutral-800 mr-4 self-center cursor-pointer", className)}
         >
             <g id="logo">
                 <g>
