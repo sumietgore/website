@@ -6,22 +6,27 @@ import Image from "next/image"
 import Footer from "@/components/shared/footer"
 import Section from "@/components/ui/section"
 
+export const metadata = {
+  title: "Sumiet Gore",
+  description: "Tech nerd at work!"
+}
+
 export default function Home() {
   return (
     <>
       <Header />
       <Main>
         <Section>
-          <div className="container flex flex-col md:flex-row gap-8 items-center max-w-5xl">
+          <div className="container flex flex-col lg:flex-row gap-8 items-center max-w-5xl">
             <div className="h-52 w-52 rounded-full bg-muted border-border border">
               <div className="relative h-40 w-40 mx-auto my-auto">
                 <Image src="/memoji.png" fill unoptimized />
               </div>
             </div>
-            <div>
+            <div className="items-center lg:items-start flex flex-col">
               <span className="px-3 py-1 rounded-2xl bg-muted text-muted-foreground text-sm border border-border">Open to Internship Opportunities</span>
-              <h1 className="mt-2 text-6xl font-bold">Hi! I am Sumiet Gore</h1>
-              <p className="mt-6 text-muted-foreground">Embedded Systems Engineering student at University of Turku and Technisxhe Universtat Berlin.</p>
+              <h1 className="mt-2 text-6xl font-bold text-center lg:text-left">Hi! I am Sumiet Gore</h1>
+              <p className="mt-6 text-muted-foreground text-center lg:text-left">Embedded Systems Engineering student at University of Turku and Technisxhe Universtat Berlin.</p>
             </div>
           </div>
         </Section>
@@ -41,7 +46,7 @@ export default function Home() {
           <div className="container max-w-5xl">
             <div className="bg-muted rounded-md py-12 px-4 flex flex-col gap-4 border border-border">
               <h1 className="text-center">Lets chat</h1>
-              <Button asChild variant="link" className="text-4xl text-center"><Link href="mailto:hello@sumietgore.com">hello@sumietgore.com</Link></Button>
+              <Button asChild variant="link" className="text-3xl md:text-4xl text-center"><Link href="mailto:hello@sumietgore.com">hello@sumietgore.com</Link></Button>
             </div>
           </div>
         </Section>
