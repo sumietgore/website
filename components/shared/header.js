@@ -7,12 +7,11 @@ export function Header() {
         <header className="h-20 flex">
             <div className="container flex gap-8 items-center max-w-5xl">
                 <Link href="/"><Logo /></Link>
-                <nav className="hidden md:flex flex-1 gap-1">
+                <nav className="flex flex-1 gap-1">
                     <Button asChild variant="ghost"><Link href="/about">About</Link></Button>
                     <Button asChild variant="ghost"><Link href="/projects">Projects</Link></Button>
                     <Button asChild variant="ghost"><Link href="/blog">Blog</Link></Button>
-                    <Button asChild variant="ghost"><Link href="/resume">Resume</Link></Button>
-                    <Button asChild variant="ghost"><Link href="/contact">Contact</Link></Button>
+                    <Button asChild variant="ghost" className="hidden md:inline-flex"><Link href="/contact">Contact</Link></Button>
                 </nav>
                 <nav className="hidden md:flex gap-1">
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>
