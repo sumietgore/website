@@ -15,7 +15,7 @@ export default function Home() {
           <div className="container flex flex-col md:flex-row gap-8 items-center max-w-5xl">
             <div className="h-52 w-52 rounded-full bg-muted border-border border">
               <div className="relative h-40 w-40 mx-auto my-auto">
-                <Image src="/memoji.png" fill />
+                <Image src="/memoji.png" fill unoptimized />
               </div>
             </div>
             <div>
