@@ -2,7 +2,7 @@
 const nextConfig = {
     //"output": "export",
     images: {
-        domains: ["https://assets.sumietgore.com"]
+        domains: ["https://web-assets.sumietgore.com", "strapi-assets.sumietgore.com"]
     },
 }
 
