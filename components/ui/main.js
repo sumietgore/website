@@ -1,5 +1,7 @@
-export default function Main({ children }) {
+import { twMerge } from "tailwind-merge"
+
+export default function Main({ children, className }) {
     return (
-        <main>{children}</main>
+        <main className={twMerge('', className)}>{children}</main>
     )
 }

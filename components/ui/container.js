@@ -1,5 +1,7 @@
-export default function Container({ children }) {
+import { twMerge } from "tailwind-merge"
+
+export default function Container({ children, className }) {
     return (
-        <div className="container">{children}</div>
+        <div className={twMerge('container', className)}>{children}</div>
     )
 }
