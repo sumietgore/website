@@ -9,7 +9,6 @@ import fetchApi, { getPostBySlug, getSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-export const runtime = 'edge';
 export const dynaminc = 'force-static'
 export const cache = 'no-store'
 
