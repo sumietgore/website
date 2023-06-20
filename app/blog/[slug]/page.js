@@ -10,8 +10,8 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
 // export const runtime = 'edge';
-export const dynaminc = 'force-static'
-export const dynamicParams = false;
+// export const dynaminc = 'force-static'
+// export const dynamicParams = false;
 // export const cache = 'no-store'
 
 export async function generateStaticParams() {
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
     const posts = response.data.posts.data
 
     return posts.map((post) => ({
-        slug: post.slug,
+        slug: post.attributes.slug,
     }))
 }
 
