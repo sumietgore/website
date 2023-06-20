@@ -6,12 +6,12 @@ export function Header() {
     return (
         <header className="h-20 flex">
             <div className="container flex gap-8 items-center max-w-5xl">
-                <Link href="/" prefetch={false}><Logo /></Link>
+                <Link href="/"><Logo /></Link>
                 <nav className="flex flex-1 gap-1">
-                    <Button asChild variant="ghost"><Link href="/about" prefetch={false}>About</Link></Button>
-                    <Button asChild variant="ghost"><Link href="/projects" prefetch={false}>Projects</Link></Button>
-                    <Button asChild variant="ghost"><Link href="/blog" prefetch={false}>Blog</Link></Button>
-                    <Button asChild variant="ghost" className="hidden md:inline-flex"><Link href="/contact" prefetch={false}>Contact</Link></Button>
+                    <Button asChild variant="ghost"><Link href="/about">About</Link></Button>
+                    <Button asChild variant="ghost"><Link href="/projects">Projects</Link></Button>
+                    <Button asChild variant="ghost"><Link href="/blog" >Blog</Link></Button>
+                    <Button asChild variant="ghost" className="hidden md:inline-flex"><Link href="/contact" >Contact</Link></Button>
                 </nav>
                 <nav className="hidden md:flex gap-1">
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>
