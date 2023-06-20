@@ -8,8 +8,6 @@ import Section from "@/components/ui/section"
 import fetchApi, { getPostBySlug, getSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import P from "@/components/typography"
-
 
 export async function generateStaticParams() {
     const response = await fetchApi(getSlugs, {
@@ -44,7 +42,7 @@ export default async function Page({ params }) {
                     <div className=" max-w-2xl mx-auto">
                         <Button variant="ghost" asChild><Link href="/blog">Back to Posts</Link></Button>
                         <div className="relative h-96 mt-8">
-                            <Image fill unoptimized src={post.attributes.image.data[0].attributes.url} />
+                            <Image fill unoptimized src={post.attributes.image.data[0].attributes.url} alt="test" />
                         </div>
                         <h1 className="text-4xl font-bold mt-12">{post.attributes.title}</h1>
                         <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, ...props }) => <p className="mt-8 text-muted-foreground" {...props} /> }} />

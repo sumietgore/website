@@ -28,7 +28,7 @@ export default async function Home() {
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
                             {posts.map(post => <Link key={post.id} href={`/blog/${post.attributes.slug}`}><div className="group cursor-pointer">
                                 <div className="relative h-56">
-                                    <Image fill unoptimized src={post.attributes.image.data[0]['attributes'].url} className="rounded-lg" />
+                                    <Image fill unoptimized src={post.attributes.image.data[0]['attributes'].url} className="rounded-lg" alt="test" />
                                 </div>
                                 <div className="px-1 py-2">
                                     <h1 className="text-lg font-bold group-hover:text-muted-foreground">{post.attributes.title}</h1>

@@ -1,3 +1,3 @@
-import P from "./p";
+// import P from "./p";
 
-export default { P }
+// export default { P }
