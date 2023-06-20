@@ -26,7 +26,7 @@ export default async function Home() {
                     <div className="container max-w-5xl">
                         <h1 className="text-4xl font-bold">Projects</h1>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-                            {projects.map(project => <ProjectCard project={project} />)}
+                            {projects.map(project => <ProjectCard key={project.id} project={project} />)}
                         </div>
                     </div>
                 </Section>

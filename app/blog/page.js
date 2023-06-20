@@ -29,7 +29,7 @@ export default async function Home() {
                     <div className="container max-w-5xl">
                         <h1 className="text-4xl font-bold">Blog</h1>
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
-                            {posts.map(post => <PostCard post={post} />)}
+                            {posts.map(post => <PostCard key={post.id} post={post} />)}
                         </div>
                     </div>
                 </Section>
