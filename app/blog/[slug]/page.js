@@ -9,10 +9,10 @@ import fetchApi, { getPostBySlug, getSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 export const dynaminc = 'force-static'
-// export const dynamicParams = false;
-export const cache = 'no-store'
+export const dynamicParams = false;
+// export const cache = 'no-store'
 
 export async function generateStaticParams() {
     const response = await fetchApi(getSlugs, {
