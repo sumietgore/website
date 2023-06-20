@@ -1,10 +1,12 @@
 import { Header } from "@/components/shared/header"
-import { Button } from "@/components/ui/button"
 import Main from "@/components/ui/main"
-import Link from "next/link"
-import Image from "next/image"
 import Footer from "@/components/shared/footer"
 import Section from "@/components/ui/section"
+
+export const metadata = {
+    title: "Contact | Sumiet Gore",
+    description: "Tech nerd at work!"
+}
 
 export default function Home() {
     return (

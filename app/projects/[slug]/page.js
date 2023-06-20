@@ -5,7 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import Footer from "@/components/shared/footer"
 import Section from "@/components/ui/section"
-import fetchApi, { getPostBySlug, getPostSlugs } from "@/lib/fetchApi"
+import fetchApi, { getProjectBySlug, getProjectSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -15,29 +15,29 @@ import remarkGfm from 'remark-gfm'
 // export const cache = 'no-store'
 
 export async function generateStaticParams() {
-    const response = await fetchApi(getPostSlugs, {
+    const response = await fetchApi(getProjectSlugs, {
         "pagination": {
             "pageSize": 100
         }
     })
 
-    const posts = response.data.posts.data
+    const projects = response.data.projects.data
 
-    return posts.map((post) => ({
-        slug: post.attributes.slug,
+    return projects.map((project) => ({
+        slug: project.attributes.slug,
     }))
 }
 
 export default async function Page({ params }) {
 
-    const response = await fetchApi(getPostBySlug, {
+    const response = await fetchApi(getProjectBySlug, {
         "filters": {
             "slug": {
                 "eq": params.slug
             }
         }
     })
-    const post = response.data.posts.data[0]
+    const project = response.data.projects.data[0]
 
     return (
         <>
@@ -45,13 +45,13 @@ export default async function Page({ params }) {
             <Main>
                 <Section className='md:mt-0'>
                     <div className=" max-w-2xl mx-auto">
-                        <Button variant="ghost" asChild><Link href="/blog">Back to Posts</Link></Button>
+                        <Button variant="ghost" asChild><Link href="/projects">Back to Projects</Link></Button>
                         <div className="relative h-96 mt-8">
-                            {post.attributes.image.data.length === 0 ? null : <Image fill unoptimized src={post.attributes.image.data[0].attributes.url} alt="test" />}
+                            {project.attributes.image.data.length === 0 ? null : <Image fill unoptimized src={project.attributes.image.data[0].attributes.url} alt="test" />}
                         </div>
-                        <h1 className="text-4xl font-bold mt-12">{post.attributes.title}</h1>
+                        <h1 className="text-4xl font-bold mt-12">{project.attributes.title}</h1>
                         {// eslint-disable-next-line
-                            <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, children }) => <p className="mt-8 text-muted-foreground" >{children}</p> }} />
+                            <Markdown children={project.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, children }) => <p className="mt-8 text-muted-foreground" >{children}</p> }} />
                         }
                     </div>
                 </Section>
