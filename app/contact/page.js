@@ -13,7 +13,7 @@ export default function Home() {
             <Main>
                 <Section className="md:mt-0">
                     <div className="container max-w-5xl">
-                        <h1 className="text-4xl font-bold">Projects</h1>
+                        <h1 className="text-4xl font-bold">Contact</h1>
                     </div>
                 </Section>
             </Main>

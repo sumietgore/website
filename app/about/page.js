@@ -11,13 +11,9 @@ export default function Home() {
         <>
             <Header />
             <Main>
-                <Section>
+                <Section className="md:mt-0">
                     <div className="container max-w-5xl">
-                        <h1 className="text-4xl font-bold">About</h1>
-                    </div>
-                </Section>
-                <Section>
-                    <div className="container max-w-5xl">
+                        <h1 className="text-4xl font-bold mb-8">About</h1>
                         <p className="mb-4">
                             Welcome to my personal website! I am thrilled to have the opportunity to share my journey as an electrical engineer and my passion for developing meaningful technologies that positively impact mankind. Currently, I am pursuing my Masters in Embedded Systems at TU Berlin and the University of Turku.
                         </p>
