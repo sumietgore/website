@@ -45,7 +45,9 @@ export default async function Page({ params }) {
                             <Image fill unoptimized src={post.attributes.image.data[0].attributes.url} alt="test" />
                         </div>
                         <h1 className="text-4xl font-bold mt-12">{post.attributes.title}</h1>
-                        <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, ...props }) => <p className="mt-8 text-muted-foreground" {...props} /> }} />
+                        {// eslint-disable-next-line
+                            <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, children }) => <p className="mt-8 text-muted-foreground" >{children}</p> }} />
+                        }
                     </div>
                 </Section>
             </Main>
