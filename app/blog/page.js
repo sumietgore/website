@@ -7,6 +7,7 @@ import Footer from "@/components/shared/footer"
 import Section from "@/components/ui/section"
 import fetchApi, { getPosts } from "@/lib/fetchApi"
 
+export const runtime = 'edge';
 export const dynaminc = 'force-static'
 export const cache = 'no-store'
 
