@@ -1,4 +1,4 @@
 {
     "editor.formatOnSave": true,
-    "liveServer.settings.root": "/out"
+    "liveServer.settings.root": "/build"
 }
