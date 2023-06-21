@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Personal Website
+
+Welcome to the repository for my personal website and blog! This website serves as a portfolio, showcasing my work, skills, experiences, and also hosts my blog where I share insights, thoughts, and interesting findings.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Inspiration](#inspiration)
+- [Contact](#contact)
+
+
+## Features
+- Portfolio: Showcase your projects, work samples, and achievements.
+- Blog: Share articles, insights, and interesting findings with readers.
+- About Me: Provide a brief introduction and highlight your skills, education, and experience.
+- Contact: Include your contact information to allow visitors to reach out to you.
+- Responsive Design: Ensure the website looks great and functions well on various devices and screen sizes.
+- Customizable: Easily update and modify the content and design to suit your needs.
+
+## Technologies Used
+
+- [Next.JS](https://nextjs.org)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com)
+- [Taxanomy](https://tx.shadcn.com)
+- [Cloudflare CDN](https://cloudflare.com) 
+- [Cloudlfare Pages](https://pages.cloudlfare.com)
 
 ## Getting Started
 
-First, run the development server:
+To get a copy of this project up and running on your local machine, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+Clone the repository:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    git clone https://github.com/sumietgore/website.git
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Navigate to the project directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    cd website
 
-## Learn More
+Open the directory in VS Code.
 
-To learn more about Next.js, take a look at the following resources:
+    code .
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+To run the project in development mode run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    npm run dev
 
-## Deploy on Vercel
+## Usage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Feel free to use the code base as you like. Though and attribution would be helpful.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Inspiration
+
+- [shadcn/ui](https://ui.shadcn.com)
+- [Next.JS Strapi Corporate Starter](https://github.com/strapi/nextjs-corporate-starter)
+
+## Contact
+
+- hello@sumietgore.com
+- https://sumietgore.com
+- https://twitter.com/sumietgore
+- https://instagram.com/sumietgore
