@@ -8,6 +8,7 @@ import Section from "@/components/ui/section"
 import fetchApi, { getProjectBySlug, getProjectSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { strapiImageLoader } from "@/lib/imageLoader"
 
 // export const runtime = 'edge';
 // export const dynaminc = 'force-static'
@@ -47,7 +48,7 @@ export default async function Page({ params }) {
                     <div className=" max-w-2xl mx-auto">
                         <Button variant="ghost" asChild><Link href="/projects">Back to Projects</Link></Button>
                         <div className="relative h-96 mt-8">
-                            {project.attributes.image.data.length === 0 ? null : <Image fill unoptimized src={project.attributes.image.data[0].attributes.url} alt="test" />}
+                            {project.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${project.attributes.image.data[0].attributes.hash}${project.attributes.image.data[0].attributes.ext}`} alt="test" className="object-cover" />}
                         </div>
                         <h1 className="text-4xl font-bold mt-12">{project.attributes.title}</h1>
                         {// eslint-disable-next-line
