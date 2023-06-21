@@ -6,6 +6,7 @@ import Image from "next/image"
 import Footer from "@/components/shared/footer"
 import Section from "@/components/ui/section"
 import { OpenSource, Leaf, Help, Innovation } from "@/components/icons"
+import { strapiImageLoader } from "@/lib/imageLoader"
 //import webImageLoader from "@/lib/imageLoader"
 
 export const dynamic = 'force-static'
@@ -25,7 +26,7 @@ export default function Home() {
           <div className="container flex flex-col lg:flex-row gap-8 items-center max-w-5xl">
             <div className="h-52 w-52 rounded-full bg-muted border-border border">
               <div className="relative h-40 w-40 mx-auto my-auto">
-                <Image src="memoji.png" fill alt="Sumiet Gore memoji" />
+                <Image loader={strapiImageLoader} src="memoji_38db2630bd.webp" fill alt="Memoji of Sumiet Gore" />
               </div>
             </div>
             <div className="items-center lg:items-start flex flex-col">
