@@ -16,7 +16,7 @@ export default function NotFound() {
                     </div>
                     <div className='rounded-lg bg-muted'>
                         <div className='relative h-80 w-80 mx-auto'>
-                            <Image loader={webImageLoader} src="/hello.png" unoptimized fill className='' alt='Not Found' />
+                            <Image loader={webImageLoader} src="hello.png" fill className='' alt='Not Found' />
                         </div>
                     </div>
                 </div>

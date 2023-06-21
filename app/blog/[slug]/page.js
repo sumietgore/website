@@ -8,6 +8,7 @@ import Section from "@/components/ui/section"
 import fetchApi, { getPostBySlug, getPostSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { strapiImageLoader } from "@/lib/imageLoader"
 
 // export const runtime = 'edge';
 // export const dynaminc = 'force-static'
@@ -47,7 +48,7 @@ export default async function Page({ params }) {
                     <div className=" max-w-2xl mx-auto">
                         <Button variant="ghost" asChild><Link href="/blog">Back to Posts</Link></Button>
                         <div className="relative h-96 mt-8">
-                            {post.attributes.image.data.length === 0 ? null : <Image fill unoptimized src={post.attributes.image.data[0].attributes.url} alt="test" />}
+                            {post.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${post.attributes.image.data[0].attributes.hash}${post.attributes.image.data[0].attributes.ext}`} className="object-cover" alt="test" />}
                         </div>
                         <h1 className="text-4xl font-bold mt-12">{post.attributes.title}</h1>
                         {// eslint-disable-next-line
