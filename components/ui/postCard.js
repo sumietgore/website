@@ -1,10 +1,8 @@
 import Link from "next/link"
 import Image from "next/image"
-import { strapiImageLoader } from "../../lib/imageLoader"
+import { strapiImageLoader } from "@/lib/imageLoader"
 
 export default function PostCard({ post }) {
-    //console.log(`${post.attributes.image.data.attributes.hash}.${post.attributes.image.data.attributes.ext}`)
-    // console.log(post.attributes.image.data[0])
     return (
         <Link key={post.id} href={`/blog/${post.attributes.slug}`}><div className="group cursor-pointer">
             <div className="relative h-56">

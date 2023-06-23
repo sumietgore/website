@@ -7,6 +7,7 @@ const nextConfig = {
         domains: ["https://web-assets.sumietgore.com", "https://strapi-assets.sumietgore.com"],
         loader: 'custom',
         loaderFile: './lib/imageLoader.js',
+        formats: ['image/avif', 'image/webp'],
     },
 }
 
