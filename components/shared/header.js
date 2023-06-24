@@ -11,7 +11,7 @@ export function Header() {
                     <Button asChild variant="ghost"><Link href="/about">About</Link></Button>
                     <Button asChild variant="ghost"><Link href="/projects">Projects</Link></Button>
                     <Button asChild variant="ghost"><Link href="/blog" >Blog</Link></Button>
-                    <Button asChild variant="ghost" className="hidden md:inline-flex"><Link href="/contact" >Contact</Link></Button>
+                    {/* <Button asChild variant="ghost" className="hidden md:inline-flex"><Link href="/contact" >Contact</Link></Button> */}
                 </nav>
                 <nav className="hidden md:flex gap-1">
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>

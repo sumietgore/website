@@ -7,6 +7,7 @@ import Footer from "@/components/shared/footer"
 import Section from "@/components/ui/section"
 import { OpenSource, Leaf, Help, Innovation } from "@/components/icons"
 import { strapiImageLoader } from "@/lib/imageLoader"
+import Beta from "@/components/beta"
 //import webImageLoader from "@/lib/imageLoader"
 
 export const dynamic = 'force-static'
@@ -93,6 +94,7 @@ export default function Home() {
         </Section>
       </Main>
       <Footer />
+      <Beta />
     </>
   )
 }
