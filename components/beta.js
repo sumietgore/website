@@ -1,16 +1,36 @@
 "use client"
 import { useToast } from "@/components/ui/use-toast"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "./ui/button";
 
 export default function Beta() {
     const { toast } = useToast()
-    useEffect(() => {
-        toast({
-            title: "Ummm! Something you should know!",
-            description: "This site is still in beta version. I will keep updating it as I get time.",
-        })
-    }, []);
-    return <></>
+    const [loaded, setLoaded] = useState(false)
+
+    if (typeof window !== 'undefined') {
+        if (sessionStorage.getItem("warningShowed") !== null) {
+            console.log(true)
+        } else {
+            if (!loaded) {
+                setLoaded(true)
+                toast({
+                    title: "Ummmm, Explore with caution!",
+                    description: "My site is in beta, but I am cooking up something awesome.",
+                    variant: "destructive"
+                })
+            }
+            sessionStorage.setItem("warningShowed", true)
+        }
+
+    }
+
+    // useEffect(() => {
+    //     console.log("Loaded")
+
+
+    //     setLoaded(true)
+    // }, [loaded]);
+
+    return <div></div>
 
 }
