@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { strapiImageLoader } from "../../lib/imageLoader"
+import { strapiImageLoader } from "@/lib/imageLoader"
 
 export default function ProjectCard({ project }) {
     return (
