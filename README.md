@@ -28,6 +28,7 @@ Welcome to the repository for my personal website and blog! This website serves 
 - [Taxanomy](https://tx.shadcn.com)
 - [Cloudflare CDN](https://cloudflare.com) 
 - [Cloudlfare Pages](https://pages.cloudlfare.com)
+- [Strapi](https://strapi.io)
 
 ## Getting Started
 
@@ -49,9 +50,15 @@ To run the project in development mode run:
 
     npm run dev
 
+## ToDo
+
+- [ ] Add typography components
+- [ ] Add composable components to the codebase
+- [ ] Add a Github Action to publish to Cloudflare Pages
+
 ## Usage
 
-Feel free to use the code base as you like. Though and attribution would be helpful.
+Feel free to use the code base as you like. Though and attribution would be appreciated.
 
 ## Inspiration
 
