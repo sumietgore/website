@@ -10,10 +10,23 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { strapiImageLoader } from "@/lib/imageLoader"
 
-// export const runtime = 'edge';
-// export const dynaminc = 'force-static'
-// export const dynamicParams = false;
-// export const cache = 'no-store'
+import moment from 'moment';
+
+export async function generateMetadata({ params, searchParams }, parent) {
+
+    const response = await fetchApi(getPostBySlug, {
+        "filters": {
+            "slug": {
+                "eq": params.slug
+            }
+        }
+    })
+    const post = response.data.posts.data[0]
+
+    return {
+        title: `${post.attributes.title} | Sumiet Gore `,
+    }
+}
 
 export async function generateStaticParams() {
     const response = await fetchApi(getPostSlugs, {
@@ -45,15 +58,16 @@ export default async function Page({ params }) {
             <Header />
             <Main>
                 <Section className='md:mt-0'>
-                    <div className=" max-w-2xl mx-auto">
-                        <Button variant="ghost" asChild><Link href="/blog">Back to Posts</Link></Button>
+                    <div className=" max-w-3xl mx-auto container">
+                        <Button variant="ghost" size="sm" asChild><Link href="/blog">Back to Posts</Link></Button>
                         <h1 className="text-4xl font-bold mt-8">{post.attributes.title}</h1>
-                        <div className="relative h-96 mt-12">
+                        <p className="mt-3">{moment(post.attributes.publishedAt).format("DD MMMM YYYY")}</p>
+                        <div className="relative h-96 mt-12 mb-8">
                             {post.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${post.attributes.image.data[0].attributes.hash}${post.attributes.image.data[0].attributes.ext}`} className="object-cover" alt="test" />}
                         </div>
 
                         {// eslint-disable-next-line
-                            <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, children }) => <p className="mt-8 text-muted-foreground" >{children}</p> }} />
+                            <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ h1: ({ node, children }) => <h1 className="mt-8 text-2xl font-bold" >{children}</h1>, h2: ({ node, children }) => <h2 className="mt-8 text-xl font-semibold" >{children}</h2>, p: ({ node, children }) => <p className="mt-4 text-muted-foreground" >{children}</p> }} />
                         }
                     </div>
                 </Section>
