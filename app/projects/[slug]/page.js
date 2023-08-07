@@ -58,10 +58,10 @@ export default async function Page({ params }) {
             <Header />
             <Main>
                 <Section className='md:mt-0'>
-                    <div className=" max-w-3xl mx-auto">
+                    <div className=" max-w-3xl container mx-auto">
                         <Button variant="ghost" asChild size="sm"><Link href="/projects">Back to Projects</Link></Button>
                         <h1 className="text-4xl font-bold mt-8">{project.attributes.title}</h1>
-                        <div className="relative h-96 mt-12 mb-8">
+                        <div className="relative h-56 md:h-80 lg:h-96 mt-12 mb-8">
                             {project.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${project.attributes.image.data[0].attributes.hash}${project.attributes.image.data[0].attributes.ext}`} alt="test" className="object-cover" />}
                         </div>
                         {// eslint-disable-next-line

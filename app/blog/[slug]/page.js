@@ -62,7 +62,7 @@ export default async function Page({ params }) {
                         <Button variant="ghost" size="sm" asChild><Link href="/blog">Back to Posts</Link></Button>
                         <h1 className="text-4xl font-bold mt-8">{post.attributes.title}</h1>
                         <p className="mt-3">{moment(post.attributes.publishedAt).format("DD MMMM YYYY")}</p>
-                        <div className="relative h-96 mt-12 mb-8">
+                        <div className="relative h-56 md:h-80 lg:h-96 mt-12 mb-8">
                             {post.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${post.attributes.image.data[0].attributes.hash}${post.attributes.image.data[0].attributes.ext}`} className="object-cover" alt="test" />}
                         </div>
 
