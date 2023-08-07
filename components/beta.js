@@ -9,7 +9,7 @@ export default function Beta() {
 
     if (typeof window !== 'undefined') {
         if (sessionStorage.getItem("warningShowed") !== null) {
-            console.log(true)
+            // console.log(true)
         } else {
             if (!loaded) {
                 setLoaded(true)
