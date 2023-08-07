@@ -21,8 +21,8 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
-      <Main>
+      <div className="bg-grad">
+        <Header />
         <Section>
           <div className="container flex flex-col lg:flex-row gap-8 items-center max-w-5xl">
             <div className="h-52 w-52 rounded-full bg-muted border-border border">
@@ -37,6 +37,8 @@ export default function Home() {
             </div>
           </div>
         </Section>
+      </div>
+      <Main>
         <Section>
           <div className="container flex flex-col gap-8">
             <div><h1 className="text-4xl font-bold">Vision Board</h1></div>
