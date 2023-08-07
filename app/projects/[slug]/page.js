@@ -47,10 +47,10 @@ export default async function Page({ params }) {
                 <Section className='md:mt-0'>
                     <div className=" max-w-2xl mx-auto">
                         <Button variant="ghost" asChild><Link href="/projects">Back to Projects</Link></Button>
-                        <div className="relative h-96 mt-8">
+                        <h1 className="text-4xl font-bold mt-8">{project.attributes.title}</h1>
+                        <div className="relative h-96 mt-12">
                             {project.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${project.attributes.image.data[0].attributes.hash}${project.attributes.image.data[0].attributes.ext}`} alt="test" className="object-cover" />}
                         </div>
-                        <h1 className="text-4xl font-bold mt-12">{project.attributes.title}</h1>
                         {// eslint-disable-next-line
                             <Markdown children={project.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, children }) => <p className="mt-8 text-muted-foreground" >{children}</p> }} />
                         }
