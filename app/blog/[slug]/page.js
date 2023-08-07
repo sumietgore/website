@@ -9,6 +9,7 @@ import fetchApi, { getPostBySlug, getPostSlugs } from "@/lib/fetchApi"
 import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { strapiImageLoader } from "@/lib/imageLoader"
+import { AspectRatio } from "@/components/ui/aspect"
 
 import moment from 'moment';
 
@@ -62,9 +63,11 @@ export default async function Page({ params }) {
                         <Button variant="ghost" size="sm" asChild><Link href="/blog">Back to Posts</Link></Button>
                         <h1 className="text-4xl font-bold mt-8">{post.attributes.title}</h1>
                         <p className="mt-3">{moment(post.attributes.publishedAt).format("DD MMMM YYYY")}</p>
-                        <div className="relative h-56 md:h-80 lg:h-96 mt-12 mb-8">
+
+                        <AspectRatio ratio={16 / 10} className="relative mt-6 mb-6">
                             {post.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${post.attributes.image.data[0].attributes.hash}${post.attributes.image.data[0].attributes.ext}`} className="object-cover" alt="test" />}
-                        </div>
+                        </AspectRatio>
+
 
                         {// eslint-disable-next-line
                             <Markdown children={post.attributes.content} rehypePlugins={[remarkGfm]} components={{ h1: ({ node, children }) => <h1 className="mt-8 text-2xl font-bold" >{children}</h1>, h2: ({ node, children }) => <h2 className="mt-8 text-xl font-semibold" >{children}</h2>, p: ({ node, children }) => <p className="mt-4 text-muted-foreground" >{children}</p> }} />
