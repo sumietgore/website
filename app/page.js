@@ -21,8 +21,8 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <Header />
-      <Main>
+      <div className="bg-grad">
+        <Header />
         <Section>
           <div className="container flex flex-col lg:flex-row gap-8 items-center max-w-5xl">
             <div className="h-52 w-52 rounded-full bg-muted border-border border">
@@ -37,6 +37,8 @@ export default function Home() {
             </div>
           </div>
         </Section>
+      </div>
+      <Main>
         <Section>
           <div className="container flex flex-col gap-8">
             <div><h1 className="text-4xl font-bold">Vision Board</h1></div>
@@ -87,7 +89,7 @@ export default function Home() {
         <Section>
           <div className="container max-w-5xl">
             <div className="bg-muted rounded-md py-12 px-4 flex flex-col gap-4 border border-border">
-              <h1 className="text-center">Lets chat</h1>
+              <h1 className="text-center">{"Let's chat!"}</h1>
               <Button asChild variant="link" className="text-3xl md:text-4xl text-center"><Link href="mailto:hello@sumietgore.com">hello@sumietgore.com</Link></Button>
             </div>
           </div>

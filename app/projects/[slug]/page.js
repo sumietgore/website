@@ -10,10 +10,22 @@ import Markdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { strapiImageLoader } from "@/lib/imageLoader"
 
-// export const runtime = 'edge';
-// export const dynaminc = 'force-static'
-// export const dynamicParams = false;
-// export const cache = 'no-store'
+export async function generateMetadata({ params, searchParams }, parent) {
+
+    const response = await fetchApi(getProjectBySlug, {
+        "filters": {
+            "slug": {
+                "eq": params.slug
+            }
+        }
+    })
+
+    const project = response.data.projects.data[0]
+
+    return {
+        title: `${project.attributes.title} | Sumiet Gore `,
+    }
+}
 
 export async function generateStaticParams() {
     const response = await fetchApi(getProjectSlugs, {
@@ -38,6 +50,7 @@ export default async function Page({ params }) {
             }
         }
     })
+
     const project = response.data.projects.data[0]
 
     return (
@@ -45,14 +58,14 @@ export default async function Page({ params }) {
             <Header />
             <Main>
                 <Section className='md:mt-0'>
-                    <div className=" max-w-2xl mx-auto">
-                        <Button variant="ghost" asChild><Link href="/projects">Back to Projects</Link></Button>
-                        <div className="relative h-96 mt-8">
+                    <div className=" max-w-3xl container mx-auto">
+                        <Button variant="ghost" asChild size="sm"><Link href="/projects">Back to Projects</Link></Button>
+                        <h1 className="text-4xl font-bold mt-8">{project.attributes.title}</h1>
+                        <div className="relative h-56 md:h-80 lg:h-96 mt-12 mb-8">
                             {project.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${project.attributes.image.data[0].attributes.hash}${project.attributes.image.data[0].attributes.ext}`} alt="test" className="object-cover" />}
                         </div>
-                        <h1 className="text-4xl font-bold mt-12">{project.attributes.title}</h1>
                         {// eslint-disable-next-line
-                            <Markdown children={project.attributes.content} rehypePlugins={[remarkGfm]} components={{ p: ({ node, children }) => <p className="mt-8 text-muted-foreground" >{children}</p> }} />
+                            <Markdown children={project.attributes.content} rehypePlugins={[remarkGfm]} components={{ h1: ({ node, children }) => <h1 className="mt-8 text-2xl font-bold" >{children}</h1>, h2: ({ node, children }) => <h2 className="mt-8 text-xl font-semibold" >{children}</h2>, p: ({ node, children }) => <p className="mt-4 text-muted-foreground" >{children}</p> }} />
                         }
                     </div>
                 </Section>
