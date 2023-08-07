@@ -1,4 +1,4 @@
-import { Logo, Github, Twitter } from "@/components/icons"
+import { Logo, Github, Twitter, LinkedIn } from "@/components/icons"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -14,6 +14,7 @@ export function Header() {
                     {/* <Button asChild variant="ghost" className="hidden md:inline-flex"><Link href="/contact" >Contact</Link></Button> */}
                 </nav>
                 <nav className="hidden md:flex gap-1">
+                    <Button asChild variant="ghost" size="sm"><Link href="https://linkedin.com/in/sumietgore" target="blank"><LinkedIn /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://twitter.com/sumietgore" target="blank"><Twitter /></Link></Button>
                     <Button asChild className="ml-2"><Link href="https://assets.sumietgore.com/CV_f3b1568e0d.pdf" target="blank">Download Resume</Link></Button>
