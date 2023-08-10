@@ -65,7 +65,7 @@ export default async function Page({ params }) {
                         <p className="mt-3">{moment(post.attributes.publishedAt).format("DD MMMM YYYY")}</p>
 
                         <AspectRatio ratio={16 / 10} className="relative mt-6 mb-6">
-                            {post.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${post.attributes.image.data[0].attributes.hash}${post.attributes.image.data[0].attributes.ext}`} className="object-cover" alt="test" />}
+                            {post.attributes.image.data.length === 0 ? null : <Image fill loader={strapiImageLoader} src={`${post.attributes.image.data[0].attributes.hash}${post.attributes.image.data[0].attributes.ext}`} className="object-cover rounded-lg" alt="test" />}
                         </AspectRatio>
 
 
