@@ -7,5 +7,6 @@ import Leaf from "./leaf";
 import Help from "./help";
 import Innovation from "./innovation";
 import LinkedIn from "./linkedin"
+import TwitterX from "./twitterX";
 
-export { Logo, LogoType, Github, Twitter, OpenSource, Leaf, Help, Innovation, LinkedIn }
+export { Logo, LogoType, Github, Twitter, TwitterX, OpenSource, Leaf, Help, Innovation, LinkedIn }
