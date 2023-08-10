@@ -1,5 +1,5 @@
-import { Header } from '@/components/shared/header'
-import Footer from '@/components/shared/footer'
+import { Header404 } from '@/components/shared/header'
+import { Footer404 } from '@/components/shared/footer'
 import Section from '@/components/ui/section'
 import Image from 'next/image'
 import { strapiImageLoader } from "@/lib/imageLoader"
@@ -7,7 +7,7 @@ import { strapiImageLoader } from "@/lib/imageLoader"
 export default function NotFound() {
     return (
         <>
-            <Header />
+            <Header404 />
             <Section>
                 <div className='container grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8'>
                     <div className=''>
@@ -21,7 +21,7 @@ export default function NotFound() {
                     </div>
                 </div>
             </Section>
-            <Footer />
+            <Footer404 />
         </>
     )
 }
