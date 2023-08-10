@@ -1,11 +1,11 @@
-import { Logo, Github, LinkedIn, TwitterX } from "@/components/icons"
+import { Logo, Github, LinkedIn, PDF, TwitterX } from "@/components/icons"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import fetchApi, { getResume } from "@/lib/fetchApi"
 
 export async function Header() {
     const response = await fetchApi(getResume)
-    let resumeLink = await response.data.resume.data.attributes.resume.data.attributes.url
+    const resumeLink = await response.data.resume.data.attributes.resume.data.attributes.url
 
     return (
         <header className="h-20 flex">
@@ -21,7 +21,7 @@ export async function Header() {
                     <Button asChild variant="ghost" size="sm"><Link href="https://linkedin.com/in/sumietgore" target="blank"><LinkedIn /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://twitter.com/sumietgore" target="blank"><TwitterX /></Link></Button>
-                    <Button asChild className="ml-2"><Link href={resumeLink} target="blank">Download Resume</Link></Button>
+                    <Button asChild className="ml-2"><Link href={resumeLink} target="blank"><PDF className="fill-white mr-2" />Download Resume</Link></Button>
                 </nav>
             </div>
         </header>
