@@ -1,8 +1,8 @@
-import Link from 'next/link'
 import { Header } from '@/components/shared/header'
 import Footer from '@/components/shared/footer'
 import Section from '@/components/ui/section'
 import Image from 'next/image'
+import { strapiImageLoader } from "@/lib/imageLoader"
 
 export default function NotFound() {
     return (
@@ -16,7 +16,7 @@ export default function NotFound() {
                     </div>
                     <div className='rounded-lg bg-muted'>
                         <div className='relative h-80 w-80 mx-auto'>
-                            <Image src="/hello.png" unoptimized fill className='' alt='Not Found' />
+                            <Image loader={strapiImageLoader} src="hello_02fd9e289c.webp" fill className='' alt='Not Found' />
                         </div>
                     </div>
                 </div>
