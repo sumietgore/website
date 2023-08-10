@@ -8,5 +8,6 @@ import Help from "./help";
 import Innovation from "./innovation";
 import LinkedIn from "./linkedin"
 import TwitterX from "./twitterX";
+import PDF from "./pdf"
 
-export { Logo, LogoType, Github, Twitter, TwitterX, OpenSource, Leaf, Help, Innovation, LinkedIn }
+export { Logo, LogoType, Github, Twitter, TwitterX, OpenSource, Leaf, Help, Innovation, LinkedIn, PDF }
