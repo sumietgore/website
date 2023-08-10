@@ -1,4 +1,4 @@
-import { LogoType, Github, Twitter, LinkedIn } from "@/components/icons"
+import { LogoType, Github, Twitter, LinkedIn, TwitterX } from "@/components/icons"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
@@ -10,7 +10,7 @@ export default function Footer() {
                 <div className="flex flex-row justify-start lg:justify-end">
                     <Button asChild variant="ghost" size="sm"><Link href="https://linkedin.com/in/sumietgore" target="blank"><LinkedIn /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>
-                    <Button asChild variant="ghost" size="sm"><Link href="https://twitter.com/sumietgore" target="blank"><Twitter /></Link></Button>
+                    <Button asChild variant="ghost" size="sm"><Link href="https://twitter.com/sumietgore" target="blank"><TwitterX /></Link></Button>
                 </div>
             </div>
 
