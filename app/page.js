@@ -38,7 +38,7 @@ export default async function Home() {
               </div>
             </div>
             <div className="items-center lg:items-start flex flex-col">
-              <Link href="https://linkedin.com/in/sumietgore" target="blank"><p className="px-3 py-1 rounded-2xl bg-muted text-primary fill-primary text-sm flex flex-row gap-2"><span className="">Open to Internship Opportunities</span><ArrowRightUp /></p></Link>
+              <Link href="https://linkedin.com/in/sumietgore" target="blank"><p className="px-3 py-1 rounded-2xl bg-muted text-primary fill-primary text-sm flex flex-row gap-1"><span className="hover:underline">Open to Internship Opportunities</span><ArrowRightUp /></p></Link>
               <h1 className="mt-2 text-6xl font-bold text-center lg:text-left">Namaste</h1>
               <p className="mt-4 text-muted-foreground text-center lg:text-left max-w-2xl">I am Sumiet (a.k.a. Sumit) Gore, an Embedded Systems Engineering student at University of Turku and Technische Universtat Berlin.</p>
               <Button asChild className="mt-6"><Link href={resumeLink} target="blank"><PDF className="fill-white mr-2" /><span>Download Resume</span></Link></Button>
