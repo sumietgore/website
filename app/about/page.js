@@ -18,16 +18,16 @@ export default function Home() {
                     <div className="container max-w-5xl">
                         <h1 className="text-4xl font-bold mb-8">About</h1>
                         <p className="mb-4">
-                            I am an electrical engineering enthusiast currently pursuing a Masters in Embedded Systems at TU Berlin and the University of Turku. My fascination with electronics began early and has driven me to explore innovative solutions in this field.
+                            {"I am an electrical engineering enthusiast currently pursuing a Masters in Embedded Systems at TU Berlin and the University of Turku. My fascination with electronics began early and has driven me to explore innovative solutions in this field."}
                         </p>
                         <p className="mb-4">
-                            My academic journey at TU Berlin and the University of Turku has exposed me to cutting-edge research and brilliant minds, refining my technical expertise and passion. I am committed to creating technology that serves a purpose, enhances efficiency, and promotes sustainability and inclusivity.
+                            {"My academic journey at TU Berlin and the University of Turku has exposed me to cutting-edge research and brilliant minds, refining my technical expertise and passion. I am committed to creating technology that serves a purpose, enhances efficiency, and promotes sustainability and inclusivity."}
                         </p>
                         <p className="mb-4">
-                            With a focus on embedded systems, I'm passionate about designing intelligent devices that can revolutionize industries like healthcare and transportation. I thrive in collaborative, interdisciplinary environments where diverse perspectives lead to innovative solutions.
+                            {"With a focus on embedded systems, I'm passionate about designing intelligent devices that can revolutionize industries like healthcare and transportation. I thrive in collaborative, interdisciplinary environments where diverse perspectives lead to innovative solutions."}
                         </p>
                         <p className="mb-4">
-                            Exploring my portfolio reveals my dedication to learning, attention to detail, and problem-solving. My goal is a future where technology coexists harmoniously with humanity, leaving a positive impact on the world. Let's connect and explore opportunities for meaningful collaboration.
+                            {"Exploring my portfolio reveals my dedication to learning, attention to detail, and problem-solving. My goal is a future where technology coexists harmoniously with humanity, leaving a positive impact on the world. Let's connect and explore opportunities for meaningful collaboration."}
                         </p>
                     </div>
                 </Section>
