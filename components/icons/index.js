@@ -9,5 +9,6 @@ import Innovation from "./innovation";
 import LinkedIn from "./linkedin"
 import TwitterX from "./twitterX";
 import PDF from "./pdf"
+import ArrowRightUp from "./arrowRightUp"
 
-export { Logo, LogoType, Github, Twitter, TwitterX, OpenSource, Leaf, Help, Innovation, LinkedIn, PDF }
+export { Logo, LogoType, Github, Twitter, TwitterX, OpenSource, Leaf, Help, Innovation, LinkedIn, PDF, ArrowRightUp }
