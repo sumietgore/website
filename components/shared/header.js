@@ -23,7 +23,6 @@ export async function Header() {
                     <Button asChild variant="ghost" size="sm"><Link href="https://linkedin.com/in/sumietgore" target="blank"><LinkedIn /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://github.com/sumietgore" target="blank"><Github /></Link></Button>
                     <Button asChild variant="ghost" size="sm"><Link href="https://twitter.com/sumietgore" target="blank"><TwitterX /></Link></Button>
-                    <Button asChild className="ml-2"><Link href={resumeLink} target="blank"><PDF className="fill-white mr-2" /><span>Download Resume</span></Link></Button>
                 </nav>
             </div>
         </header>
