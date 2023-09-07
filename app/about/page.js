@@ -59,7 +59,7 @@ export default function Home() {
                                 </TimelineContent>
                             </TimelineItem>
                             <TimelineItem>
-                                <TimelineTitle>Founder and Partner <span className="text-base font-normal">(Subhadra Agro, India - Family Business)</span></TimelineTitle>
+                                <TimelineTitle>Process Design Engineer <span className="text-base font-normal">(Subhadra Agro, India - Family Business)</span></TimelineTitle>
                                 <TimelineTime>July 2019 - May 2021</TimelineTime>
                                 <TimelineContent>
                                     <ul className="space-y-1">
